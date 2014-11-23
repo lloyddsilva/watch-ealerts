@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'latest', to: 'alerts#latest'
   resources :alerts
 
   root to: 'visitors#index'

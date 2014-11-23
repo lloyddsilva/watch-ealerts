@@ -8,6 +8,11 @@ class AlertsController < ApplicationController
     respond_with(@alerts)
   end
 
+  def latest
+    @alert = Alert.last
+    respond_with(@alert)
+  end
+
   def show
     respond_with(@alert)
   end
